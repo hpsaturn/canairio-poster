@@ -58,30 +58,31 @@ linewidth=2pt % Width of the border lines around content boxes
 %----------------------------------------------------------------------------------------
 %
 {
-\textsf %Sans Serif
-{
-{CanAir.io}
-}
+  \textsf %Sans Serif
+  {
+    \hspace{-0.7cm}
+    {CanAir.io}
+  }
 } % Poster title
 % {\vspace{0.2em} Add Author Name, Add another author name\\ 
 % {\small \vspace{0.7em} Department of Computing, TU Dublin, Tallaght, Dublin, Ireland}} 
 {\sf\vspace{0.2em}\\
 Antonio Vanegas  % Author names
 \vspace{0.1em}\\
-\small{ CanAirIO founder, Android Developer, CanAir.io community member
+\small{ CanAirIO founder, Android-Hardware developer, Cos4Cloud member
 \vspace{0.2em}\\
 @hpsaturn  % Author email addresses
 }
 }
-{\includegraphics[width=.13\linewidth]{images/logo.png}} % CanAir.io logo
+{\includegraphics[width=.14\linewidth]{images/logo.png}} % CanAir.io logo
 
 
 % this states the box starts at column 0 (edge of page), row 0 (top of page) for a span of 3 (columns wide)
 \headerbox{CanAirIO Citizen Network for Air Quality Monitoring}{name=introduction,column=0,row=0, span=3}{
-  This is an Open Source initiative that uses for now a ESP32 module and some kind PM2.5
-  sensors, interfaced with an Android client app to have static (WiFi) or mobile
+  This is an Open Source initiative that uses for now a ESP32 module and some kind
+  PM2.5 sensors, interfaced with an Android client app to have static (WiFi) or mobile
   (Bluetooth) air quality stations. 
-\vspace{0.7em}\\
+\vspace{0.5em}\\
   CanAirio is a citizen science iniciative that not only aims to generate an air
   quality network of fixed monitoring stations, but also to measure what occurs
   with pedestrians, drivers and passengers in their daily lives considering that
@@ -98,19 +99,23 @@ Antonio Vanegas  % Author names
 \headerbox{Main Goals}{name=subtopic1,column=0,below=introduction,span=1}{
 
 %\vspace{0.15cm}
-The following is how you might add in special characters for example: ($n \sim$24-30 students).
 
-\vspace{4.2cm} %remove this, only added for spacing
+\vspace{5.0cm} %remove this, only added for spacing
 
 }
 
 % this states the box starts at column 0 (edge of page), directly below the box labelled subtopic1 for a span of 1 (column wide)
 
-\headerbox{FOSSi and CanAir.io}{name=subtopic2,column=0,below=subtopic1,span=1}{
-Enter content on subtopic
+\headerbox{Countries}{name=subtopic2,column=0,below=subtopic1,span=1}{
 
-\vspace{5cm} %remove this, only added for spacing
-
+  We want improve the DIY hardware and reduce the sensor complexity for that
+  help a more people in the world.
+  \vspace{0.1em}\\
+  {
+    \hspace{-0.1cm}
+    \centering
+    \includegraphics[scale=.28]{images/user_countries20200309.jpg}
+  }
 }
 
 \headerbox{OpenSource and OpenHardware project}{name=subtopic3,column=1,below=introduction,span=2}{
@@ -127,11 +132,11 @@ Enter content on subtopic
 \vspace{0.1em}\\
 - GATT server for WiFi and Sensor setup.
 \vspace{0.1em}\\
-- Multiple sensor devives are supported.
+- Multiple sensor devices are supported.
 \vspace{0.1em}\\
-- Some prototypes DIY with Laser cut boxes.
+- Prototypes DIY with Laser cut boxes.
 \vspace{0.1em}\\
-- 3D print portatil case for mobile.
+- 3DPrint portatil case for mobile.
 
 \subsubsection*{Software status:} 
 
@@ -144,38 +149,83 @@ Enter content on subtopic
 - Web map for static stations.
 \vspace{0.1em}\\
 - Tool for show dinamic tracks for mobile captures. 
-\vspace{0.2em}\\
+\vspace{0.1em}\\
 
 % inserts an image inside the box, 5 rows high
+
 {
-  \hspace{0.2cm}
+  \hspace{0.1cm}
   \centering
-  \includegraphics[width=.96\linewidth]{images/collage_horizontal.jpg} 
+  \includegraphics[width=.96\linewidth]{images/collage_horizontal02.jpg} 
 }
-\vspace{0.05cm} %remove this, only added for spacing
+\vspace{0.01cm} %remove this, only added for spacing
 }
 
 
-\headerbox{Output}{name=topicoverview,column=0,span=3,below=subtopic2}{
+\headerbox{Citizen work and results}{name=topicoverview,column=0,span=3,below=subtopic2}{
 {
     {
-        \hspace{0.1cm}
+        \hspace{-.05cm}
         \centering
-    	\includegraphics[scale=.30]{images/mobile_track.png}
+    	\includegraphics[scale=.82]{images/mobile_capture02.jpg}
     }
     {
-        \hspace{1.5cm}
+        \hspace{-0.3cm}
         \centering
-    	\includegraphics[scale=.8]{Ireland_Latest.PNG}
+    	\includegraphics[scale=.15]{images/mobile_capture02_android.jpg}
+    }
+    {
+        \hspace{-0.3cm}
+        \centering
+    	\includegraphics[scale=.078]{images/map_static_stations00.jpg}
+    }
+    {
+        \hspace{-0.4cm}
+        \centering
+    	\includegraphics[scale=.3]{images/collage_square00.jpg}
     }
 }
 
 }
 
-\headerbox{Sponsors and Contact}{name=conclusion,column=0,below=topicoverview,span=3,above=bottom}{
-Final conclusions
+\headerbox{Thanks to:}{name=thanks,column=0,below=topicoverview,span=1,above=bottom}{
 
-\vspace{10cm} %remove this, only added for spacing
+  {
+    \subsubsection*{Sponsors:}
+    Cos4Cloud: www.cos4cloud-eosc.eu
+    \vspace{0.1em}\\
+    Trébola: www.trebola.org
+    \subsubsection*{Communities:}
+    Hackbo: hackbo.co
+    \vspace{0.1em}\\
+    Unloquer: wiki.unloquer.org
+    \vspace{0.1em}\\
+    Grafoscopio: mutabit.com/grafoscopio
+    \vspace{0.1em}\\
+  }
+
+}
+
+
+\headerbox{Sponsors}{name=sponsors,column=1,below=topicoverview,span=2,above=bottom}{
+
+  {
+    {
+        \hspace{0.2cm}
+        \centering
+      \includegraphics[scale=.65]{images/trebola-logo-01.jpg}
+    }
+    {
+        \hspace{-0.5cm}
+        \centering
+      \includegraphics[scale=.14]{images/cos4Cloud_logo-02.png}
+    }
+    {
+        \hspace{-0.5cm}
+        \centering
+      \includegraphics[scale=.150]{images/https_canairio.png}
+    }
+  }
 
 }
 \end{poster}
