@@ -28,6 +28,8 @@
 
 \definecolor{Mycolor2}{HTML}{FFDF00} 
 
+\definecolor{Mycolor3}{HTML}{234DEB} 
+
 \begin{poster}
 {
 grid=false,
@@ -38,7 +40,7 @@ bgColorTwo=white, % Background color for the gradient on the right side of the p
 borderColor=Mycolor1, % Border color
 headerColorOne=Mycolor2, % Background color for the header in the content boxes (left side)
 headerColorTwo=Mycolor2, % Background color for the header in the content boxes (right side)
-headerFontColor=white, % Text color for the header text in the content boxes
+headerFontColor=Mycolor3, % Text color for the header text in the content boxes
 boxColorOne=white, % Background color of the content boxes
 textborder=rounded, %rectangle, % Format of the border around content boxes, can be: none, bars, coils, triangles, rectangle, rounded, roundedsmall, roundedright or faded
 eyecatcher=false, % Set to false for ignoring the left logo in the title and move the title left
@@ -71,19 +73,29 @@ Antonio Vanegas  % Author names
 @hpsaturn  % Author email addresses
 }
 }
-{\includegraphics[width=.18\linewidth]{logo.png}} % TU Dublin logo
+{\includegraphics[width=.13\linewidth]{images/logo.png}} % CanAir.io logo
 
 
 % this states the box starts at column 0 (edge of page), row 0 (top of page) for a span of 3 (columns wide)
-\headerbox{Introduction}{name=introduction,column=0,row=0, span=3}{
-Place an over view of your research - use your executive summary or abstract as a pointer of what information to place in here.
+\headerbox{CanAirIO Citizen Network for Air Quality Monitoring}{name=introduction,column=0,row=0, span=3}{
+  This is an Open Source initiative that uses for now a ESP32 module and some kind PM2.5
+  sensors, interfaced with an Android client app to have static (WiFi) or mobile
+  (Bluetooth) air quality stations. 
+\vspace{0.7em}\\
+  CanAirio is a citizen science iniciative that not only aims to generate an air
+  quality network of fixed monitoring stations, but also to measure what occurs
+  with pedestrians, drivers and passengers in their daily lives considering that
+  in some cities the highest density of affected people is moving. For this
+  reason, we are developing a mobile application that is able to set a PM2.5
+  sensor, and other related sensors, as a fixed station using WiFi or mobile
+  data from the smartphone by using a Bluetooth connection.
 
-\vspace{2cm} %remove this, only added for spacing
+%\vspace{2cm} %remove this, only added for spacing
 
 }
 
 % this states the box starts at column 0 (edge of page), directly below the box labelled introduction for a span of 1 (column wide)
-\headerbox{Sub Topic 1}{name=subtopic1,column=0,below=introduction,span=1}{
+\headerbox{Main Goals}{name=subtopic1,column=0,below=introduction,span=1}{
 
 %\vspace{0.15cm}
 The following is how you might add in special characters for example: ($n \sim$24-30 students).
@@ -94,58 +106,62 @@ The following is how you might add in special characters for example: ($n \sim$2
 
 % this states the box starts at column 0 (edge of page), directly below the box labelled subtopic1 for a span of 1 (column wide)
 
-\headerbox{Sub Topic 2}{name=subtopic2,column=0,below=subtopic1,span=1}{
+\headerbox{FOSSi and CanAir.io}{name=subtopic2,column=0,below=subtopic1,span=1}{
 Enter content on subtopic
 
 \vspace{5cm} %remove this, only added for spacing
 
 }
 
-\headerbox{Sub Topic 3}{name=subtopic3,column=1,below=introduction,span=2}{
-\vspace{0.3cm}
+\headerbox{OpenSource and OpenHardware project}{name=subtopic3,column=1,below=introduction,span=2}{
+\vspace{0.1cm}
 
 % inserts an image inside the box, 5 rows high
-\begin{wrapfigure}[5]{r}{0.25\textwidth}
-\includegraphics[width=.9\linewidth]{logo.png} 
+\begin{wrapfigure}[4]{r}{0.5\textwidth}
+\includegraphics[width=1\linewidth]{images/canariov2collage01.jpg} 
 \end{wrapfigure}
 
-\subsubsection*{1. Introduction to sub section:}
+\subsubsection*{Hardware status:} 
 
-Subsection description
+- All firmware in PlatformIO framework.
+\vspace{0.1em}\\
+- GATT server for WiFi and Sensor setup.
+\vspace{0.1em}\\
+- Multiple sensor devives are supported.
+\vspace{0.1em}\\
+- Some prototypes DIY with Laser cut boxes.
+\vspace{0.1em}\\
+- 3D print portatil case for mobile.
 
-\vspace{2.3cm} %remove this, only added for spacing
+\subsubsection*{Software status:} 
 
+- Android native application (GATT client)
+\vspace{0.1em}\\
+- InfluxDB cloud server for now.
+\vspace{0.1em}\\
+- API for writing, reading in development.
+\vspace{0.1em}\\
+- Web map for static stations.
+\vspace{0.1em}\\
+- Tool for show dinamic tracks for mobile captures. 
+\vspace{0.2em}\\
 
-\begin{wrapfigure}[8]{r}{0.25\textwidth}
-\includegraphics[width=.9\linewidth]{DevOps.png} 
-\includegraphics[width=.9\linewidth]{DevOps.png} 
-\end{wrapfigure}
-
-\vspace{0.3cm}
-\subsubsection*{2. Another sub section:}
-
-Subsection description
-
-\vspace{2.3cm} %remove this, only added for spacing
-
-\begin{wrapfigure}[5]{r}{0.25\textwidth}
-\includegraphics[width=.9\linewidth]{logo.png} 
-\end{wrapfigure}
-
-\vspace{0.35cm}
-\subsubsection*{3. Another sub section:}
-Final Subsection description
-
-\vspace{2cm} %remove this, only added for spacing
+% inserts an image inside the box, 5 rows high
+{
+  \hspace{0.2cm}
+  \centering
+  \includegraphics[width=.96\linewidth]{images/collage_horizontal.jpg} 
+}
+\vspace{0.05cm} %remove this, only added for spacing
 }
 
 
-\headerbox{Topic Overview}{name=topicoverview,column=0,span=3,below=subtopic2}{
+\headerbox{Output}{name=topicoverview,column=0,span=3,below=subtopic2}{
 {
     {
-        \hspace{1cm}
+        \hspace{0.1cm}
         \centering
-    	\includegraphics[scale=.7]{ThreeYrGraph.jpg}
+    	\includegraphics[scale=.30]{images/mobile_track.png}
     }
     {
         \hspace{1.5cm}
@@ -156,7 +172,7 @@ Final Subsection description
 
 }
 
-\headerbox{Conclusions and Future Work}{name=conclusion,column=0,below=topicoverview,span=3,above=bottom}{
+\headerbox{Sponsors and Contact}{name=conclusion,column=0,below=topicoverview,span=3,above=bottom}{
 Final conclusions
 
 \vspace{10cm} %remove this, only added for spacing
